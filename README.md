@@ -1,9 +1,29 @@
-# Portfolio Page
+# Cheat Sheet
 
-Portfolio Page is a website to display projects that I have completed up to this point.
+## Table of Contents
 
-# Project Status
+- [General information](#general-information)
+- [Features](#features)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [Acknowledgment](#acknowledgment)
+- [Contact](#contact)
 
-Portfolio Page is updated in tandem with my learning of a web development curriculum. Portfolio Page is updated real time in tandem with my learning in order to apply what I have learned on a weekly basis. The page will continue to change and develop as my learning continues to progress.
 
-// Testing updates
+## General Information
+
+
+## Features
+
+
+## Project Status
+
+
+## Room for Improvement
+
+
+## Acknowledgment
+
+
+## Contact
+
