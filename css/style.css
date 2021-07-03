@@ -1,0 +1,60 @@
+/* General styling */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and nav */
+
+nav {
+    height: 10vh;
+    background-color: midnightblue;
+    position: relative;
+    z-index: 20;
+}
+
+.menu-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    flex-direction: column;
+    background-color: midnightblue;
+    clip-path: circle(0px);
+    --webkit-clip-path: circle(0px);
+    transition: all 1s ease-out;
+    pointer-events: none;
+}
+
+.menu-items {
+    text-decoration: none;
+    color: white;
+    font-size: 4rem;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 8px;
+}
+
+.menu-links.open {
+    clip-path: circle(1000px);
+    --webkit-clip-path: circle(1000px);
+    pointer-events: all;
+}

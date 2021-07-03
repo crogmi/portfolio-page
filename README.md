@@ -1,4 +1,4 @@
-# Cheat Sheet
+# Personal Portfolio Website
 
 ## Table of Contents
 
@@ -8,7 +8,6 @@
 - [Room for Improvement](#room-for-improvement)
 - [Acknowledgment](#acknowledgment)
 - [Contact](#contact)
-
 
 ## General Information
 
