@@ -1,0 +1,258 @@
+/* Colors and fonts */
+:root {
+    --blue: #0F2862;
+    --red: #9E363A;
+    --dark-blue: #091F36;
+    --grey-blue: #4F5F76;
+    --white: #FFF;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHjxsAXC-q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* General styling */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+hr {
+    width: 7%;
+    margin: 3% 0;
+    background-color: var(--white);
+}
+
+/* Header and nav */
+
+nav {
+    height: 4vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 100;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+}
+
+.social-nav {
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    flex-direction: column;
+    background-color: var(--blue);
+    clip-path: inset(0 0 100% 0);
+    --webkit-clip-path: inset(0 0 100% 0);
+    transition: all 0.75s ease-out;
+    pointer-events: none;
+}
+
+.menu-items {
+    text-decoration: none;
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.menu-items:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    cursor: pointer;
+    margin-right: 2%;
+    z-index: 100;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+    margin: 8px;
+}
+
+.menu-links.open {
+    clip-path: inset(0 0 0 0);
+    --webkit-clip-path: inset(0 0 0 0);
+    pointer-events: all;
+    z-index: 50;
+}
+
+.fab, .far {
+    font-size: 1.5rem;
+    z-index: 100;
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template: repeat(5, 1fr) / 1fr;
+}
+
+.main-section {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 4.5fr 5.5fr;
+}
+
+.main-section h1 {
+    font-size: 5rem;
+}
+
+.main-section h2 {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.section-info {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.section-visual {
+    grid-area: 1 / 2 / 2 / 3;
+    position: relative;
+    z-index: 0;
+}
+
+.section-caption {
+    margin-left: 13%;
+}
+
+.image-overlay {
+    height: 65%;
+    width: 65%;
+    top: 16%;
+    left: 8%;
+    display: block;
+    background-color: var(--grey-blue);
+    position: absolute;
+}
+
+.section-image {
+    height: 65%;
+    width: 65%;
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    background-color: var(--blue);
+    padding: 1rem 2rem;
+    overflow: hidden;
+}
+
+
+/* Banner */
+
+
+/* About me */
+#about h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#about h4, h5 {
+    font-weight: normal;
+    margin-left: 5%;
+}
+
+#about h3 {
+    font-weight: bold;
+}
+
+/* Project 1 */
+#project-1 .section-image {
+    background-image: url("/img/coffee-coterie-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Project 2 */
+
+
+/* Contact */
+#contact h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+a.button {
+    display: block;
+    width: 80%;
+    border-radius: 25px;
+    border: 2px solid var(--red);
+    background-color: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+#contact .far, #contact .fab {
+    margin: 0 1rem;
+}
+
+/* Footer */
+footer {
+    font-size: 0.75rem;
+    text-align: right;
+    margin: 0 2% 1% 0;
+}
