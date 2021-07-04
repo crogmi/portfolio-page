@@ -41,6 +41,7 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     font-family: "Lato", sans-serif;
+    scroll-snap-type: y mandatory;
 }
 
 *, *:before, *:after {
@@ -55,9 +56,10 @@ body {
 }
 
 hr {
-    width: 7%;
+    width: 25%;
     margin: 3% 0;
-    background-color: var(--white);
+    border: 1.5px solid var(--red);
+    background-color: var(--red);
 }
 
 /* Header and nav */
@@ -70,8 +72,9 @@ nav {
     z-index: 100;
 }
 
-.navbar{
+.navbar {
     width: 100%;
+    padding: 2rem 0;
     display: flex;
     justify-content: flex-end;
     align-content: center;
@@ -85,6 +88,12 @@ nav {
     align-items: center;
 }
 
+.social-nav a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--white);
+}
+
 .menu-links {
     position: fixed;
     height: 100vh;
@@ -94,7 +103,7 @@ nav {
     align-items: center;
     list-style-type: none;
     flex-direction: column;
-    background-color: var(--blue);
+    background-image: linear-gradient(to bottom right,#2a5470, #4c4177);
     clip-path: inset(0 0 100% 0);
     --webkit-clip-path: inset(0 0 100% 0);
     transition: all 0.75s ease-out;
@@ -147,6 +156,7 @@ main {
     width: 100%;
     display: grid;
     grid-template: 1fr / 4.5fr 5.5fr;
+    scroll-snap-align: start;
 }
 
 .main-section h1 {
@@ -202,6 +212,16 @@ main {
 
 
 /* About me */
+.image-divide {
+    width: 17%;
+    border: 1px solid var(--red);
+    background-color: var(--red);
+}
+
+.next-row {
+    margin-bottom: 3%;
+}
+
 #about h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -218,7 +238,7 @@ main {
 
 /* Project 1 */
 #project-1 .section-image {
-    background-image: url("img/coffee-coterie-1.png");
+    background-image: url("/img/coffee-coterie-1.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -246,6 +266,11 @@ a.button {
     cursor: pointer;
 }
 
+.button:hover {
+    background-color: var(--white);
+    color: black;
+}
+
 #contact .far, #contact .fab {
     margin: 0 1rem;
 }
@@ -255,4 +280,5 @@ footer {
     font-size: 0.75rem;
     text-align: right;
     margin: 0 2% 1% 0;
+    scroll-snap-align: start;
 }
