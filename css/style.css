@@ -54,6 +54,12 @@ body {
     color: var(--white);
 }
 
+hr {
+    width: 7%;
+    margin: 3% 0;
+    background-color: var(--white);
+}
+
 /* Header and nav */
 
 nav {
@@ -61,6 +67,7 @@ nav {
     width: 100%;
     position: fixed;
     display: flex;
+    z-index: 100;
 }
 
 .navbar{
@@ -98,6 +105,10 @@ nav {
     text-decoration: none;
     font-size: 4rem;
     color: var(--white);
+}
+
+.menu-items:hover {
+    text-decoration: underline;
 }
 
 .hamburger {
@@ -147,20 +158,101 @@ main {
     font-weight: 100;
 }
 
-/* Banner */
- {
+.section-info {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: wrap;
+}
 
+.section-visual {
+    grid-area: 1 / 2 / 2 / 3;
+    position: relative;
+    z-index: 0;
+}
+
+.section-caption {
+    margin-left: 13%;
+}
+
+.image-overlay {
+    height: 65%;
+    width: 65%;
+    top: 16%;
+    left: 8%;
+    display: block;
+    background-color: var(--grey-blue);
+    position: absolute;
+}
+
+.section-image {
+    height: 65%;
+    width: 65%;
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    background-color: var(--blue);
+    padding: 1rem 2rem;
+    overflow: hidden;
+}
+
+
+/* Banner */
+
+
+/* About me */
+#about h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#about h4, h5 {
+    font-weight: normal;
+    margin-left: 5%;
+}
+
+#about h3 {
+    font-weight: bold;
 }
 
 /* Project 1 */
-
-
+#project-1 .section-image {
+    background-image: url("/img/coffee-coterie-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 /* Project 2 */
 
 
 /* Contact */
+#contact h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
 
+a.button {
+    display: block;
+    width: 80%;
+    border-radius: 25px;
+    border: 2px solid var(--red);
+    background-color: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    cursor: pointer;
+}
 
+#contact .far, #contact .fab {
+    margin: 0 1rem;
+}
 
 /* Footer */
+footer {
+    font-size: 0.75rem;
+    text-align: right;
+    margin: 0 2% 1% 0;
+}
