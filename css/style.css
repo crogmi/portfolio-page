@@ -218,7 +218,7 @@ main {
 
 /* Project 1 */
 #project-1 .section-image {
-    background-image: url("/img/coffee-coterie-1.png");
+    background-image: url("img/coffee-coterie-1.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
