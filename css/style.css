@@ -5,6 +5,8 @@
     --dark-blue: #091F36;
     --grey-blue: #4F5F76;
     --white: #FFF;
+    --light-blue: #2a5470;
+    --purple: #4c4177;
 
 }
 
@@ -42,6 +44,7 @@ html {
     font-size: 16px;
     font-family: "Lato", sans-serif;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -103,7 +106,7 @@ nav {
     align-items: center;
     list-style-type: none;
     flex-direction: column;
-    background-image: linear-gradient(to bottom right,#2a5470, #4c4177);
+    background-image: linear-gradient(to bottom right, var(--light-blue), var(--purple));
     clip-path: inset(0 0 100% 0);
     --webkit-clip-path: inset(0 0 100% 0);
     transition: all 0.75s ease-out;
@@ -238,9 +241,10 @@ main {
 
 /* Project 1 */
 #project-1 .section-image {
-    background-image: url("/img/coffee-coterie-1.png");
+    background-image: url("../img/coffee-coterie-1.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Project 2 */
